@@ -100,7 +100,7 @@ Tema seçimi **localStorage** ile kaydedilir ve sayfa yenilendikten sonra da kor
 
 1. **Repoyu klonlayın veya dosyaları indirin:**
 ```bash
-git clone https://github.com/yourusername/kurapiee.git
+git clone https://github.com/KuraPiee/giri-kay-t-ekran-/
 cd kurapiee
 ```
 
@@ -427,3 +427,4 @@ Bu sistem demo amaçlıdır. Üretim ortamında kullanmadan önce:
 *Last Updated: 2025*
 
 </div>
+
