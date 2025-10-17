@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KuraPiee - Login & Register</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button class="theme-btn red" data-theme="red" title="Kırmızı Tema">
+            <i class="fas fa-circle" style="color: #FF6B6B;"></i>
+        </button>
+        <button class="theme-btn blue" data-theme="blue" title="Mavi Tema">
+            <i class="fas fa-circle" style="color: #4A90E2;"></i>
+        </button>
+        <button class="theme-btn dark" data-theme="dark" title="Siyah Tema">
+            <i class="fas fa-circle" style="color: #2C3E50;"></i>
+        </button>
+        <button class="theme-btn light" data-theme="light" title="Beyaz Tema">
+            <i class="fas fa-circle" style="color: #F0F0F0;"></i>
+        </button>
+    </div>
+
+    <!-- Floating Background Elements -->
+    <div class="bg-elements">
+        <div class="element element-1"></div>
+        <div class="element element-2"></div>
+        <div class="element element-3"></div>
+        <div class="element element-4"></div>
+        <div class="element element-5"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="form-container">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h1>KuraPiee</h1>
+                <p>Hoşgeldiniz!</p>
+            </div>
+
+            <!-- Login Form -->
+            <form class="form login-form active" id="loginForm">
+                <div class="form-title">
+                    <h2>Giriş Yap</h2>
+                    <p>Hesabınızla giriş yapın</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="login-email">
+                        <i class="fas fa-envelope"></i> E-posta
+                    </label>
+                    <input type="email" id="login-email" placeholder="örnek@email.com" required>
+                    <span class="form-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="login-password">
+                        <i class="fas fa-lock"></i> Şifre
+                    </label>
+                    <div class="password-wrapper">
+                        <input type="password" id="login-password" placeholder="••••••••" required>
+                        <button type="button" class="toggle-password" data-target="login-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <span class="form-error"></span>
+                </div>
+
+                <div class="remember-forgot">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="remember">
+                        <span>Beni Hatırla</span>
+                    </label>
+                    <a href="#" class="forgot-link">Şifremi Unuttum?</a>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span>Giriş Yap</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+
+                <div class="form-footer">
+                    <p>Hesabınız yok mu? <a href="#" class="switch-form" data-form="register">Kayıt Ol</a></p>
+                </div>
+
+                <div class="divider">
+                    <span>VEYA</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn google">
+                        <i class="fab fa-google"></i>
+                        <span>Google</span>
+                    </button>
+                    <button type="button" class="social-btn github">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Register Form -->
+            <form class="form register-form" id="registerForm">
+                <div class="form-title">
+                    <h2>Kayıt Ol</h2>
+                    <p>Yeni bir hesap oluşturun</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="register-name">
+                        <i class="fas fa-user"></i> Ad Soyad
+                    </label>
+                    <input type="text" id="register-name" placeholder="Adınız Soyadınız" required>
+                    <span class="form-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="register-email">
+                        <i class="fas fa-envelope"></i> E-posta
+                    </label>
+                    <input type="email" id="register-email" placeholder="örnek@email.com" required>
+                    <span class="form-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="register-password">
+                        <i class="fas fa-lock"></i> Şifre
+                    </label>
+                    <div class="password-wrapper">
+                        <input type="password" id="register-password" placeholder="••••••••" required>
+                        <button type="button" class="toggle-password" data-target="register-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-bar"></div>
+                        <span class="strength-text">Güç: Zayıf</span>
+                    </div>
+                    <span class="form-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="register-confirm">
+                        <i class="fas fa-lock"></i> Şifreyi Onayla
+                    </label>
+                    <div class="password-wrapper">
+                        <input type="password" id="register-confirm" placeholder="••••••••" required>
+                        <button type="button" class="toggle-password" data-target="register-confirm">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <span class="form-error"></span>
+                </div>
+
+                <div class="terms-check">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" required>
+                        <span>
+                            <a href="#" class="terms-link">Kullanım Şartlarını</a> ve 
+                            <a href="#" class="terms-link">Gizlilik Politikasını</a> Kabul Ediyorum
+                        </span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span>Kayıt Ol</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+
+                <div class="form-footer">
+                    <p>Zaten hesabınız var mı? <a href="#" class="switch-form" data-form="login">Giriş Yap</a></p>
+                </div>
+
+                <div class="divider">
+                    <span>VEYA</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn google">
+                        <i class="fab fa-google"></i>
+                        <span>Google</span>
+                    </button>
+                    <button type="button" class="social-btn github">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i>
+                <h3>Başarılı!</h3>
+                <p id="successText"></p>
+            </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <div class="info-card">
+                <i class="fas fa-lock-open"></i>
+                <h3>Güvenli Giriş</h3>
+                <p>Verileriniz şifreli ve güvenli şekilde korunmaktadır</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Hızlı Erişim</h3>
+                <p>Saniye içinde hesabınıza erişin</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-user-shield"></i>
+                <h3>Özel Korunma</h3>
+                <p>İki faktörlü doğrulama ile ekstra güvenlik</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Developer Info Tooltip -->
+    <div class="dev-info">
+        <button class="dev-btn" id="devBtn">
+            <i class="fas fa-code"></i>
+        </button>
+        <div class="dev-tooltip" id="devTooltip">
+            <div class="dev-content">
+                <h4>Geliştirici</h4>
+                <p><strong>Ad:</strong> Eren</p>
+                <p><strong>Nickname:</strong> KuraPiee</p>
+                <h4>Şirket</h4>
+                <p><strong>İsim:</strong> xren</p>
+                <p><strong>Web:</strong> <a href="https://xren.com.tr" target="_blank">xren.com.tr</a></p>
+                <h4>Sosyal Ağlar</h4>
+                <div class="social-links">
+                    <a href="https://github.com/KuraPiee" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/KuraPiee" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/KuraPiee" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
